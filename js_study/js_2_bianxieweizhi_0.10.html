@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_bianxieweizhi_0.1.0</title>
+
+    <!--
+        可以将js代码写在外部js文件中，通过script标签引入
+        在不同页面同时引用，也可以利用到浏览器的缓存机制
+        推荐使用的方式
+
+        Script标签一旦用于引入外部文件时，就不能再编写代码了，即使编写了浏览器也会忽略。
+        如果需要，可以再创建一个新的script标签，用于编写内部代码。
+    -->
+    <script type="text/javascript" src="js_2_script.js"></script>
+    <script>alert("我是js外部文件代码");</script>
+</head>
+<body>
+    
+    <!--可以将js代码编写到标签的onclick属性中
+    点击按钮时js代码才执行
+
+    虽然可以卸载标签属性中，但是他们属于结构与行为耦合，不推荐使用
+    -->
+    <button onclick="alert('讨厌，你点我干嘛~')">点我一下</button>
+    
+    <!--
+        可以将js代码写在超链接的href属性中，当点击超链接时执行js代码
+    -->
+    <a href="javascript:alert('让你点你就点');">你也点我一下</a>
+    <a href="javascript:;">你也点我一下</a>
+
+</body>
+</html>
